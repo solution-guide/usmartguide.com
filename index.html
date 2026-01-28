@@ -3,203 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宇思明途 | USmartGuide - 智启寰宇，思行明途</title>
-    <meta name="description" content="宇思明途专注于为成长型企业提供全球化视野下的战略规划、数字化转型及人才发展指引。">
+    <title>宇思明途 | AI视觉与高速智造领航者</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
-        body { font-family: 'Noto Sans SC', sans-serif; scroll-behavior: smooth; }
-        .hero-bg {
-            background: linear-gradient(rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.5)), 
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
-            background-size: cover; background-position: center;
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+SC:wght@300;400;700&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #010409; color: #e6edf3; }
+        .font-tech { font-family: 'Orbitron', sans-serif; }
+        
+        /* 深度学习流光背景 */
+        .ai-bg {
+            background: radial-gradient(circle at 50% 50%, #112240 0%, #010409 100%);
+            position: relative; overflow: hidden;
         }
-        .text-gold { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
-        .border-gold { border-color: #D4AF37; }
+        .neural-net-overlay {
+            position: absolute; inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .border-glow {
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+        }
+        .border-glow:hover {
+            border-color: #22d3ee;
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* AI 扫描动画 */
+        .ai-scanner {
+            position: absolute; width: 100%; height: 40%;
+            background: linear-gradient(to bottom, transparent, rgba(34, 211, 238, 0.2), transparent);
+            animation: ai-scan 4s infinite ease-in-out;
+        }
+        @keyframes ai-scan { 0% { top: -40% } 100% { top: 100% } }
+
+        .chip-dot {
+            width: 4px; height: 4px; background: #22d3ee; border-radius: 50%;
+            position: absolute; box-shadow: 0 0 10px #22d3ee;
+        }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
-                    <i class="fas fa-compass text-white text-sm"></i>
+    <nav class="fixed w-full z-[100] bg-slate-950/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="relative w-10 h-10 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+                    <i class="fas fa-brain text-white text-xl"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tighter text-slate-800">宇思明途 <span class="text-xs font-light text-slate-400">USMARTGUIDE</span></span>
+                <div>
+                    <span class="text-xl font-bold tracking-tighter block text-white font-tech uppercase">USmartGuide</span>
+                    <span class="text-[9px] text-emerald-400 tracking-[0.3em] uppercase">宇思明途 · 深度学习实验室</span>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#home" class="hover:text-gold transition">首页</a>
-                <a href="#about" class="hover:text-gold transition">品牌故事</a>
-                <a href="#solutions" class="hover:text-gold transition">解决方案</a>
-                <a href="#insights" class="hover:text-gold transition">洞察中心</a>
-                <a href="#contact" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-gold transition">即刻咨询</a>
+            <div class="hidden md:flex space-x-8 text-[11px] font-bold tracking-widest uppercase">
+                <a href="#ai-tech" class="hover:text-cyan-400 transition">AI 算法核心</a>
+                <a href="#performance" class="hover:text-cyan-400 transition">性能基准</a>
+                <a href="#solutions" class="hover:text-cyan-400 transition">量产方案</a>
+                <a href="#contact" class="px-5 py-2 bg-white/5 border border-cyan-500/50 text-cyan-400 rounded-md hover:bg-cyan-500 hover:text-slate-950 transition">获取报告全文</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-6">
-        <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                智启寰宇，<span class="text-gold">思行明途。</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-white/80 mb-10 font-light">
-                为企业提供全球化视野下的智慧决策指南，让前行不再盲目。
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#solutions" class="bg-gold text-white px-8 py-4 rounded-lg text-lg font-bold hover:scale-105 transition shadow-lg">探索解决方案</a>
-                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/20 transition">了解品牌故事</a>
+    <section class="ai-bg min-h-screen flex items-center px-6 relative">
+        <div class="neural-net-overlay"></div>
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-8">
+                    <span class="text-[10px] font-bold text-cyan-400 tracking-widest uppercase">Deep Learning & Computer Vision</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-none font-tech uppercase">
+                    AI <span class="text-white">Powered</span><br><span class="gradient-text">Precision</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-10 max-w-xl leading-relaxed">
+                    基于深度学习模型的工业缺陷检测系统，将视觉识别准确率提升至 <span class="text-cyan-400 font-bold">99.9%</span>。结合双轨分选架构，在 18,000 片/小时的高速运转中实现零误判。
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="#ai-tech" class="bg-cyan-500 text-slate-950 px-10 py-4 rounded-md font-bold hover:scale-105 transition shadow-lg shadow-cyan-500/30">算法解析</a>
+                    <a href="#solutions" class="bg-white/5 border border-white/20 px-10 py-4 rounded-md font-bold hover:bg-white/10 transition">量产设备展示</a>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-20 blur-2xl rounded-full"></div>
+                <div class="relative bg-slate-900 rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&q=80&w=1000" class="w-full opacity-60 grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="ai-scanner"></div>
+                    <div class="absolute top-1/4 left-1/4 p-2 border-2 border-cyan-400 rounded-sm">
+                        <span class="absolute -top-6 left-0 text-[10px] bg-cyan-400 text-slate-950 px-1 font-bold">CRACK_DETECTED: 98.5%</span>
+                    </div>
+                    <div class="absolute bottom-1/3 right-1/4 p-2 border-2 border-emerald-400 rounded-sm">
+                        <span class="absolute -top-6 left-0 text-[10px] bg-emerald-400 text-slate-950 px-1 font-bold">QUALIFIED: 99.1%</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-slate-50">
+    <section id="ai-tech" class="py-32 bg-[#0d1117]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <h2 class="text-gold text-sm font-bold tracking-[0.2em] uppercase mb-4">About Us</h2>
-                    <h3 class="text-4xl font-bold text-slate-900 mb-8 leading-tight">以智慧，拓宽商业边界</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        宇思明途（USmartGuide）是一家专注于成长型企业的专业智库，我们致力于在充满不确定性的时代，为客户挖掘确定性的成功路径。
-                    </p>
-                    <div class="border-l-4 border-gold pl-6 py-2 italic text-slate-700 text-xl">
-                        “智启寰宇，思行明途。我们让智慧可见，让未来可期。”
-                    </div>
-                </div>
-                <div class="lg:w-1/2 grid gap-4 w-full">
-                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
-                        <div class="flex gap-4">
-                            <span class="text-3xl font-bold text-gold">宇</span>
-                            <p class="text-sm opacity-80">Universe：代表我们包容万物、跨越国界的商业视野。在宏观格局中寻找企业定位。</p>
-                        </div>
-                    </div>
-                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
-                        <div class="flex gap-4">
-                            <span class="text-3xl font-bold text-gold">思</span>
-                            <p class="text-sm opacity-80">Thought：代表我们逻辑严密、以终为始的咨询方法策略。深思熟虑，方能致远。</p>
-                        </div>
-                    </div>
-                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
-                        <div class="flex gap-4">
-                            <span class="text-2xl font-bold text-gold">明途</span>
-                            <p class="text-sm opacity-80">Smart Guide：代表我们交付给客户的最终价值——清晰、确定、可落地的成功路径。</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-24">
+                <h2 class="text-cyan-400 font-bold tracking-[0.3em] uppercase mb-4 font-tech">AI Methodology</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6">深度学习驱动的工业感知</h3>
+                <p class="text-slate-500">宇思明途将卷积神经网络 (CNN) 与传统的机器视觉算子融合，解决光伏行业中复杂纹理下的微小缺陷识别难题。</p>
             </div>
-        </div>
-    </section>
 
-    <section id="solutions" class="py-24">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16">核心服务领域</h2>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition group">
-                    <i class="fas fa-globe-americas text-4xl text-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">全球战略规划</h4>
-                    <p class="text-gray-500 text-sm">跨境市场准入分析、全球品牌建设及多文化团队治理方案。</p>
-                </div>
-                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
-                    <i class="fas fa-rocket text-4xl text-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">数字化转型</h4>
-                    <p class="text-gray-500 text-sm">利用AI技术优化业务流程，构建数据驱动的决策支持系统。</p>
-                </div>
-                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
-                    <i class="fas fa-user-tie text-4xl text-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">中高层人才发展</h4>
-                    <p class="text-gray-500 text-sm">定制化领导力工作坊，为企业未来竞争储备核心管理人才。</p>
-                </div>
-                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
-                    <i class="fas fa-shield-alt text-4xl text-gold mb-6"></i>
-                    <h4 class="text-xl font-bold mb-4">合规与风控</h4>
-                    <p class="text-gray-500 text-sm">全方位的市场合规评估，规避出海及扩张过程中的法律风险。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="insights" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-3xl font-bold mb-2">洞察中心</h2>
-                    <p class="text-slate-400">来自宇思明途的前沿行业深度分析</p>
-                </div>
-                <a href="#" class="text-gold border-b border-gold hover:text-white transition pb-1">阅读更多</a>
-            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
-                        <i class="fas fa-chart-pie text-4xl opacity-20 group-hover:scale-110 transition"></i>
+                <div class="p-10 rounded-3xl bg-slate-900/50 border border-white/5 border-glow transition-all">
+                    <div class="w-14 h-14 bg-cyan-500/20 text-cyan-400 rounded-2xl flex items-center justify-center mb-8 text-2xl">
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    <span class="text-gold text-xs uppercase tracking-widest">战略研究 · 2026</span>
-                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">全球供应链重构下的亚洲机遇</h4>
+                    <h4 class="text-xl font-bold mb-4">特征金字塔网络 (FPN)</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">针对硅片表面不同尺寸的缺陷（如点状崩边与线状划痕），通过多尺度特征融合，大幅提升微小目标的召回率。</p>
+                    <ul class="text-[10px] font-mono text-cyan-400/70 space-y-1">
+                        <li>> ResNet-50 Backbone</li>
+                        <li>> Multi-Scale Training</li>
+                    </ul>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
-                        <i class="fas fa-microchip text-4xl opacity-20 group-hover:scale-110 transition"></i>
+
+                <div class="p-10 rounded-3xl bg-slate-900/50 border border-white/5 border-glow transition-all">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mb-8 text-2xl">
+                        <i class="fas fa-project-diagram"></i>
                     </div>
-                    <span class="text-gold text-xs uppercase tracking-widest">数字化 · 2026</span>
-                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">生成式AI如何重塑咨询服务业</h4>
+                    <h4 class="text-xl font-bold mb-4">端到端自适应算法</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">针对报告中提到的“激光数据批量发送”难题，采用序列模型对激光时序数据进行纠偏，实现标识符与物理位置的动态对齐。</p>
+                    <ul class="text-[10px] font-mono text-emerald-400/70 space-y-1">
+                        <li>> UID Linear Regression</li>
+                        <li>> Time-Series Alignment</li>
+                    </ul>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
-                        <i class="fas fa-users text-4xl opacity-20 group-hover:scale-110 transition"></i>
+
+                <div class="p-10 rounded-3xl bg-slate-900/50 border border-white/5 border-glow transition-all">
+                    <div class="w-14 h-14 bg-purple-500/20 text-purple-400 rounded-2xl flex items-center justify-center mb-8 text-2xl">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <span class="text-gold text-xs uppercase tracking-widest">人才管理 · 2025</span>
-                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">混合办公时代的团队效能提升</h4>
+                    <h4 class="text-xl font-bold mb-4">TensorRT 实时推理</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">利用 GPU 硬件加速，单张图像（不小于85,000kb）的 AI 推理耗时控制在 5ms 以内，完美契合 18,000 片/小时的产能节奏。</p>
+                    <ul class="text-[10px] font-mono text-purple-400/70 space-y-1">
+                        <li>> FP16 Quantization</li>
+                        <li>> CUDA Core Optimization</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">即刻启动您的明途</h2>
-            <p class="text-gray-500 mb-12">留下您的联系方式，我们的资深顾问将在24小时内与您联络。</p>
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <input type="text" placeholder="您的姓名" class="p-4 border rounded-lg focus:outline-none focus:border-gold">
-                <input type="email" placeholder="公司邮箱" class="p-4 border rounded-lg focus:outline-none focus:border-gold">
-                <textarea placeholder="您的需求描述" class="p-4 border rounded-lg focus:outline-none focus:border-gold md:col-span-2 h-32"></textarea>
-                <button class="md:col-span-2 bg-slate-900 text-white py-4 rounded-lg font-bold hover:bg-gold transition shadow-xl uppercase tracking-widest">提交咨询申请</button>
-            </form>
+    <section id="performance" class="py-32 bg-slate-950 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-8 italic">实测数据证明价值</h2>
+                <div class="space-y-12">
+                    <div class="relative">
+                        <div class="flex justify-between mb-2 uppercase text-xs tracking-widest font-bold">
+                            <span>通讯稳定性 (Beckhoff ADS)</span>
+                            <span class="text-cyan-400">99.98%</span>
+                        </div>
+                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                            <div class="w-[99.98%] h-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]"></div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex justify-between mb-2 uppercase text-xs tracking-widest font-bold">
+                            <span>AI 模型识别精度 (IOU > 0.85)</span>
+                            <span class="text-emerald-400">99.95%</span>
+                        </div>
+                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                            <div class="w-[99.95%] h-full bg-emerald-400 shadow-[0_0_10px_#34d399]"></div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex justify-between mb-2 uppercase text-xs tracking-widest font-bold">
+                            <span>GC 回收耗时降低</span>
+                            <span class="text-cyan-400">-83%</span>
+                        </div>
+                        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                            <div class="w-[83%] h-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900/50 p-12 rounded-[2rem] border border-white/5 backdrop-blur-md">
+                <div class="text-center mb-8">
+                    <h4 class="text-cyan-400 text-sm font-bold tracking-[0.4em] uppercase mb-2 italic">Production Breakthrough</h4>
+                    <p class="text-2xl font-bold text-white">实现行业“从无到有”的突破</p>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                    根据《技术分析报告》，该方案通过**ArrayPool 对象池**与**Lock-Free Queue（无锁队列）**技术，解决了 Windows 环境下 C# 处理高频工业数据的瓶颈，使设备故障率大幅降低 <span class="text-white font-bold">50%</span>，占据了市场 <span class="text-cyan-400 font-bold">100%</span> 的双轨设备份额。
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-950 p-6 rounded-2xl">
+                        <p class="text-[10px] text-slate-500 uppercase mb-1">分选效率</p>
+                        <p class="text-2xl font-tech font-bold">18,000 <span class="text-xs">pcs/h</span></p>
+                    </div>
+                    <div class="bg-slate-950 p-6 rounded-2xl">
+                        <p class="text-[10px] text-slate-500 uppercase mb-1">通讯响应</p>
+                        <p class="text-2xl font-tech font-bold">8.7 <span class="text-xs">ms</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-slate-50 border-t py-12">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 text-sm">
-            <div class="md:col-span-2">
-                <div class="flex items-center space-x-2 mb-6">
-                    <div class="w-6 h-6 bg-slate-900 rounded-full flex items-center justify-center">
-                        <i class="fas fa-compass text-white text-[10px]"></i>
+    <section id="solutions" class="py-32 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">全场景智能终端</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group relative overflow-hidden rounded-[2.5rem] bg-slate-950 p-10 border border-white/5 hover:border-cyan-500/50 transition-all">
+                    <div class="flex justify-between items-start mb-10">
+                        <i class="fas fa-microchip text-4xl text-cyan-400"></i>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Model: X-Sorter 2000</span>
                     </div>
-                    <span class="text-lg font-bold">宇思明途</span>
+                    <h4 class="text-2xl font-bold mb-4">高速双轨硅片分选机</h4>
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">集成光学外观检测与电学性能检测，支持厚度、崩边、划痕、少子寿命等 20+ 项参数实时判定。</p>
+                    <a href="#" class="inline-flex items-center text-cyan-400 text-sm font-bold gap-2">技术规格书 <i class="fas fa-arrow-right text-xs"></i></a>
                 </div>
-                <p class="text-gray-500 leading-relaxed max-w-sm">
-                    宇思明途（USmartGuide）致力于为全球企业提供智慧决策指南，涵盖战略规划、数字化转型、人才发展及风险合规顾问服务。
-                </p>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6">联系我们</h5>
-                <p class="text-gray-500 space-y-2">
-                    <i class="fas fa-envelope text-gold mr-2"></i> jamesye@alu.suda.edu.cn<br>
-                    <i class="fas fa-location-dot text-gold mr-2"></i> 中国 · 苏州 
-                </p>
-            </div>
-            <div>
-                <h5 class="font-bold mb-6">关注我们</h5>
-                <div class="flex space-x-4 text-xl text-slate-400">
-                    <a href="#" class="hover:text-gold"><i class="fab fa-weixin"></i></a>
-                    <a href="#" class="hover:text-gold"><i class="fab fa-linkedin"></i></a>
+
+                <div class="group relative overflow-hidden rounded-[2.5rem] bg-slate-950 p-10 border border-white/5 hover:border-emerald-500/50 transition-all">
+                    <div class="flex justify-between items-start mb-10">
+                        <i class="fas fa-search-plus text-4xl text-emerald-400"></i>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Model: ReCheck-V1</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">光伏复检机系统</h4>
+                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">针对料盒硅片的二次高精度复核，采用 WCF 模块化架构，实现服务器-多客户端数据自动汇总处理。</p>
+                    <a href="#" class="inline-flex items-center text-emerald-400 text-sm font-bold gap-2">PLC 通讯协议文档 <i class="fas fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t text-center text-gray-400 text-xs">
-            &copy; 2026 宇思明途 (USmartGuide). All Rights Reserved.
+    </section>
+
+    <footer id="contact" class="bg-black py-24 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-bold mb-10">共建 AI<br><span class="text-cyan-400">工业通途</span></h2>
+                <p class="text-slate-500 text-lg leading-relaxed mb-12">
+                    宇思明途始终处于工业视觉与 C# 高性能计算的前沿。我们需要解决的不仅是代码，更是中国光伏制造的效能极限。
+                </p>
+                <div class="space-y-6 text-sm font-bold">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400"><i class="fas fa-envelope"></i></div>
+                        <span>Jamesye@alu.suda.edu.cn</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400"><i class="fas fa-robot"></i></div>
+                        <span>技术支持：苏州 · 工业园区</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white/5 p-12 rounded-[2rem] border border-white/10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" placeholder="姓名" class="bg-transparent border-b border-white/20 p-2 focus:border-cyan-400 outline-none text-sm transition w-full">
+                        <input type="text" placeholder="企业/研究机构" class="bg-transparent border-b border-white/20 p-2 focus:border-cyan-400 outline-none text-sm transition w-full">
+                    </div>
+                    <input type="email" placeholder="业务联系邮箱" class="bg-transparent border-b border-white/20 p-2 focus:border-cyan-400 outline-none text-sm transition w-full">
+                    <textarea placeholder="描述您的智造需求或算法挑战..." class="bg-transparent border-b border-white/20 p-2 focus:border-cyan-400 outline-none text-sm transition w-full h-32"></textarea>
+                    <button class="w-full bg-cyan-500 text-slate-950 py-5 rounded-md font-bold tracking-widest uppercase hover:bg-emerald-400 transition shadow-[0_10px_30px_rgba(34,211,238,0.2)]">提交合作申请</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-24 pt-12 border-t border-white/5 flex justify-between items-center">
+            <p class="text-slate-600 text-[10px] tracking-widest uppercase">&copy; 2026 USmartGuide Intelligence. Powered by Deep Learning.</p>
+            <div class="flex gap-6 text-slate-600">
+                <i class="fab fa-github hover:text-white cursor-pointer transition"></i>
+                <i class="fab fa-linkedin hover:text-white cursor-pointer transition"></i>
+            </div>
         </div>
     </footer>
+
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-10 right-10 w-14 h-14 bg-cyan-500 text-slate-950 rounded-full flex items-center justify-center shadow-2xl z-[200] hover:scale-110 transition">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
 </body>
 </html>
