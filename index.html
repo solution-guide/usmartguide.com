@@ -4,138 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宇思明途 | USmartGuide - 智启寰宇，思行明途</title>
+    <meta name="description" content="宇思明途专注于为成长型企业提供全球化视野下的战略规划、数字化转型及人才发展指引。">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
-        
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-        }
-
+        body { font-family: 'Noto Sans SC', sans-serif; scroll-behavior: smooth; }
         .hero-bg {
-            background: linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.4)), 
-                        url('https://images.unsplash.com/photo-1494451930944-8998632c212e?auto=format&fit=crop&q=80&w=2071');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.5)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
+            background-size: cover; background-position: center;
         }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .text-gold {
-            color: #D4AF37;
-        }
-
-        .bg-gold {
-            background-color: #D4AF37;
-        }
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-900">
+<body class="bg-white text-slate-900">
 
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center">
                     <i class="fas fa-compass text-white text-sm"></i>
                 </div>
-                <span class="text-xl font-bold tracking-wider text-slate-800">宇思明途 <span class="text-sm font-light text-slate-500 ml-1">USmartGuide</span></span>
+                <span class="text-xl font-bold tracking-tighter text-slate-800">宇思明途 <span class="text-xs font-light text-slate-400">USMARTGUIDE</span></span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#" class="hover:text-blue-600 transition">首页</a>
-                <a href="#" class="hover:text-blue-600 transition">关于解决方案</a>
-                <a href="#" class="hover:text-blue-600 transition">成功案例</a>
-                <a href="#" class="hover:text-blue-600 transition">洞察中心</a>
-                <a href="#" class="bg-gold text-white px-4 py-1.5 rounded-full hover:bg-yellow-600 transition">联系我们</a>
+                <a href="#home" class="hover:text-gold transition">首页</a>
+                <a href="#about" class="hover:text-gold transition">品牌故事</a>
+                <a href="#solutions" class="hover:text-gold transition">解决方案</a>
+                <a href="#insights" class="hover:text-gold transition">洞察中心</a>
+                <a href="#contact" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-gold transition">即刻咨询</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg h-screen flex items-center justify-start px-6 md:px-20 relative overflow-hidden">
-        <div class="max-w-4xl z-10">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                智启寰宇，<br><span class="text-gold">思行明途。</span>
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                智启寰宇，<span class="text-gold">思行明途。</span>
             </h1>
-            <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl font-light">
-                为您的企业提供全球化视野下的智慧决策指南，探索数字化转型的最优路径。
+            <p class="text-xl md:text-2xl text-white/80 mb-10 font-light">
+                为企业提供全球化视野下的智慧决策指南，让前行不再盲目。
             </p>
-            <div class="flex space-x-4">
-                <button class="bg-gold text-white px-8 py-4 rounded-lg text-lg font-bold hover:scale-105 transition shadow-xl">
-                    Explore Our Solutions
-                </button>
-                <button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/20 transition">
-                    关于我们
-                </button>
-            </div>
-        </div>
-        <div class="absolute right-[-10%] opacity-30 hidden lg:block">
-            <i class="fas fa-globe-asia text-[40rem] text-white/20"></i>
-        </div>
-    </section>
-
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">核心解决方案</h2>
-            <div class="w-16 h-1 bg-gold mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="glass-card p-8 rounded-2xl hover:shadow-2xl transition group border-t-4 border-transparent hover:border-gold">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition duration-300"><i class="fas fa-chart-line"></i></div>
-                <h3 class="text-xl font-bold mb-2">全球战略规划</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">提供宏观市场进入策略，助力品牌在复杂全球环境中寻找增长极。</p>
-            </div>
-            
-            <div class="glass-card p-8 rounded-2xl hover:shadow-2xl transition group border-t-4 border-transparent hover:border-gold">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition duration-300"><i class="fas fa-microchip"></i></div>
-                <h3 class="text-xl font-bold mb-2">数字化转型</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">利用AI与数据驱动技术，优化企业内部运营流程与效率。</p>
-            </div>
-
-            <div class="glass-card p-8 rounded-2xl hover:shadow-2xl transition group border-t-4 border-transparent hover:border-gold">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition duration-300"><i class="fas fa-users-gear"></i></div>
-                <h3 class="text-xl font-bold mb-2">人才发展</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">定制化人才培养体系，为企业未来十年的竞争储备智慧力量。</p>
-            </div>
-
-            <div class="glass-card p-8 rounded-2xl hover:shadow-2xl transition group border-t-4 border-transparent hover:border-gold">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition duration-300"><i class="fas fa-shield-halved"></i></div>
-                <h3 class="text-xl font-bold mb-2">策略顾问</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">全方位的风险评估与合规指引，让企业每一步都走得更稳健。</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#solutions" class="bg-gold text-white px-8 py-4 rounded-lg text-lg font-bold hover:scale-105 transition shadow-lg">探索解决方案</a>
+                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/20 transition">了解品牌故事</a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-12 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 border-b border-slate-700 pb-12">
-            <div>
-                <h4 class="text-xl font-bold mb-4">宇思明途</h4>
-                <p class="text-slate-400 text-sm leading-loose">
-                    总部：中国 · 苏州<br>
-                    邮箱：Jamesye@alu.suda.edu.cn<br>
-                    电话：+86 (0512) 6888 8888
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-gold text-sm font-bold tracking-[0.2em] uppercase mb-4">About Us</h2>
+                    <h3 class="text-4xl font-bold text-slate-900 mb-8 leading-tight">以智慧，拓宽商业边界</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        宇思明途（USmartGuide）是一家专注于成长型企业的专业智库，我们致力于在充满不确定性的时代，为客户挖掘确定性的成功路径。
+                    </p>
+                    <div class="border-l-4 border-gold pl-6 py-2 italic text-slate-700 text-xl">
+                        “智启寰宇，思行明途。我们让智慧可见，让未来可期。”
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid gap-4 w-full">
+                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
+                        <div class="flex gap-4">
+                            <span class="text-3xl font-bold text-gold">宇</span>
+                            <p class="text-sm opacity-80">Universe：代表我们包容万物、跨越国界的商业视野。在宏观格局中寻找企业定位。</p>
+                        </div>
+                    </div>
+                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
+                        <div class="flex gap-4">
+                            <span class="text-3xl font-bold text-gold">思</span>
+                            <p class="text-sm opacity-80">Thought：代表我们逻辑严密、以终为始的咨询方法策略。深思熟虑，方能致远。</p>
+                        </div>
+                    </div>
+                    <div class="group p-6 bg-white rounded-xl shadow-sm hover:bg-slate-900 hover:text-white transition-all duration-500">
+                        <div class="flex gap-4">
+                            <span class="text-2xl font-bold text-gold">明途</span>
+                            <p class="text-sm opacity-80">Smart Guide：代表我们交付给客户的最终价值——清晰、确定、可落地的成功路径。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-16">核心服务领域</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition group">
+                    <i class="fas fa-globe-americas text-4xl text-gold mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">全球战略规划</h4>
+                    <p class="text-gray-500 text-sm">跨境市场准入分析、全球品牌建设及多文化团队治理方案。</p>
+                </div>
+                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
+                    <i class="fas fa-rocket text-4xl text-gold mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">数字化转型</h4>
+                    <p class="text-gray-500 text-sm">利用AI技术优化业务流程，构建数据驱动的决策支持系统。</p>
+                </div>
+                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
+                    <i class="fas fa-user-tie text-4xl text-gold mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">中高层人才发展</h4>
+                    <p class="text-gray-500 text-sm">定制化领导力工作坊，为企业未来竞争储备核心管理人才。</p>
+                </div>
+                <div class="p-8 border rounded-2xl hover:border-gold hover:shadow-xl transition">
+                    <i class="fas fa-shield-alt text-4xl text-gold mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">合规与风控</h4>
+                    <p class="text-gray-500 text-sm">全方位的市场合规评估，规避出海及扩张过程中的法律风险。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="insights" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">洞察中心</h2>
+                    <p class="text-slate-400">来自宇思明途的前沿行业深度分析</p>
+                </div>
+                <a href="#" class="text-gold border-b border-gold hover:text-white transition pb-1">阅读更多</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-4xl opacity-20 group-hover:scale-110 transition"></i>
+                    </div>
+                    <span class="text-gold text-xs uppercase tracking-widest">战略研究 · 2026</span>
+                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">全球供应链重构下的亚洲机遇</h4>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
+                        <i class="fas fa-microchip text-4xl opacity-20 group-hover:scale-110 transition"></i>
+                    </div>
+                    <span class="text-gold text-xs uppercase tracking-widest">数字化 · 2026</span>
+                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">生成式AI如何重塑咨询服务业</h4>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl mb-4 h-48 bg-slate-800 flex items-center justify-center">
+                        <i class="fas fa-users text-4xl opacity-20 group-hover:scale-110 transition"></i>
+                    </div>
+                    <span class="text-gold text-xs uppercase tracking-widest">人才管理 · 2025</span>
+                    <h4 class="text-xl font-bold mt-2 group-hover:text-gold transition">混合办公时代的团队效能提升</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">即刻启动您的明途</h2>
+            <p class="text-gray-500 mb-12">留下您的联系方式，我们的资深顾问将在24小时内与您联络。</p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <input type="text" placeholder="您的姓名" class="p-4 border rounded-lg focus:outline-none focus:border-gold">
+                <input type="email" placeholder="公司邮箱" class="p-4 border rounded-lg focus:outline-none focus:border-gold">
+                <textarea placeholder="您的需求描述" class="p-4 border rounded-lg focus:outline-none focus:border-gold md:col-span-2 h-32"></textarea>
+                <button class="md:col-span-2 bg-slate-900 text-white py-4 rounded-lg font-bold hover:bg-gold transition shadow-xl uppercase tracking-widest">提交咨询申请</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t py-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 text-sm">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-6 h-6 bg-slate-900 rounded-full flex items-center justify-center">
+                        <i class="fas fa-compass text-white text-[10px]"></i>
+                    </div>
+                    <span class="text-lg font-bold">宇思明途</span>
+                </div>
+                <p class="text-gray-500 leading-relaxed max-w-sm">
+                    宇思明途（USmartGuide）致力于为全球企业提供智慧决策指南，涵盖战略规划、数字化转型、人才发展及风险合规顾问服务。
                 </p>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-4">快速链接</h4>
-                <ul class="text-slate-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-gold">研究报告</a></li>
-                    <li><a href="#" class="hover:text-gold">专家团队</a></li>
-                    <li><a href="#" class="hover:text-gold">合作伙伴</a></li>
-                </ul>
+                <h5 class="font-bold mb-6">联系我们</h5>
+                <p class="text-gray-500 space-y-2">
+                    <i class="fas fa-envelope text-gold mr-2"></i> jamesye@alu.suda.edu.cn<br>
+                    <i class="fas fa-location-dot text-gold mr-2"></i> 中国 · 苏州 
+                </p>
             </div>
-            <div class="flex space-x-4 text-2xl">
-                <i class="fab fa-weixin hover:text-green-500 cursor-pointer"></i>
-                <i class="fab fa-linkedin hover:text-blue-500 cursor-pointer"></i>
-                <i class="fab fa-x-twitter hover:text-slate-400 cursor-pointer"></i>
+            <div>
+                <h5 class="font-bold mb-6">关注我们</h5>
+                <div class="flex space-x-4 text-xl text-slate-400">
+                    <a href="#" class="hover:text-gold"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="hover:text-gold"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto py-6 text-center text-slate-500 text-xs">
-            Copyright © 2026 宇思明途 (USmartGuide). All Rights Reserved.
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t text-center text-gray-400 text-xs">
+            &copy; 2026 宇思明途 (USmartGuide). All Rights Reserved.
         </div>
     </footer>
 
